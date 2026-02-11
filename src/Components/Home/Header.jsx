@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom'; // Router linklarini import qilamiz
+import { NavLink } from 'react-router-dom'; 
 import './Header.css';
-
+import h25 from "../../assets/h25.png"
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Menyu yopilishi uchun funksiya
   const closeMenu = () => setIsOpen(false);
 
   return (
     <header className="site-header">
       <div className="container">
-        {/* Logo - Asosiy sahifaga qaytish uchun Link ichiga olindi */}
         <NavLink to="/" className="logo" onClick={closeMenu}>
-          <img src="/h25.png" alt="Logo" className="logo-img" />
+          <img src={h25} alt="Logo" className="logo-img" />
           <span className="logo-text">Organick</span>
         </NavLink>
 

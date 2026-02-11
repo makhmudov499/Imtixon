@@ -174,7 +174,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Tepadan boshlab terish */
+    justify-content: flex-start; 
     padding-top: 80px; 
   }
 
@@ -185,7 +185,6 @@
     gap: 20px;
   }
 
-  /* Aktiv sahifa linkini rangini o'zgartirish */
   .main-nav ul li a.active {
     color: #7EB693; 
     border-bottom: 2px solid #7EB693;
