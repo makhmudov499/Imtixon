@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom'; // Router linklarini import qilamiz
 import './Header.css';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Menyu yopilishi uchun funksiya
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="site-header">
       <div className="container">
-        <div className="logo">
+        {/* Logo - Asosiy sahifaga qaytish uchun Link ichiga olindi */}
+        <NavLink to="/" className="logo" onClick={closeMenu}>
           <img src="/h25.png" alt="Logo" className="logo-img" />
           <span className="logo-text">Organick</span>
-        </div>
+        </NavLink>
 
-        {/* Menyu qismi - isOpen true bo'lsa 'active' klassi qo'shiladi */}
+        {/* Navigatsiya */}
         <nav className={`main-nav ${isOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
-            <li><a href="#shop" onClick={() => setIsOpen(false)}>Shop</a></li>
-            <li><a href="#projects" onClick={() => setIsOpen(false)}>Projects</a></li>
-            <li><a href="#news" onClick={() => setIsOpen(false)}>News</a></li>
+            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
+            <li><NavLink to="/shop" onClick={closeMenu}>Shop</NavLink></li>
+            <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
+            <li><NavLink to="/news" onClick={closeMenu}>News</NavLink></li>
           </ul>
         </nav>
 
