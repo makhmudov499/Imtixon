@@ -1,108 +1,174 @@
-.navbar {
-  padding: 20px 0;
-  background-color: #ffffff;
-  font-family: 'Inter', sans-serif; 
+.site-header {
+  background: #ffffff;
+  padding: 15px 0;
+  /* position: sticky; */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
+/* Logo Dizayni */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  cursor: pointer;
 }
 
-.logo img {
-  width: 35px;
+.logo-img {
+  width: 30px; /* Logo kichraytirildi */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.logo span {
-  font-size: 24px;
+.logo:hover .logo-img {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.logo-text {
+  font-size: 22px;
   font-weight: 800;
   color: #274C5B;
+  letter-spacing: -0.5px;
 }
 
-.nav-links {
+/* Navigatsiya Linklari */
+.main-nav ul {
   display: flex;
-  gap: 30px;
+  list-style: none;
+  gap: 35px;
 }
 
-.nav-links a {
+.main-nav ul li a {
   text-decoration: none;
   color: #274C5B;
   font-weight: 700;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  font-size: 17px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.nav-links a:hover {
-  color: #7EB693;
-}
-
-.nav-links a.active {
-  color: #7EB693;
-}
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-  background: #FAFAFA;
-  border-radius: 30px;
-  padding: 5px;
-}
-
-.search-input {
-  border: none;
-  background: transparent;
-  padding: 8px 15px;
-  outline: none;
-  width: 150px;
-}
-
-.search-btn {
+/* Hover effekti (chiziqcha) */
+.main-nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
   background-color: #7EB693;
-  border: none;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  color: white;
+  transition: width 0.3s ease;
+}
+
+.main-nav ul li a:hover::after {
+  width: 100%;
+}
+
+.main-nav ul li a:hover {
+  color: #7EB693;
+}
+
+/* Cart va Search dizayni */
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #E0E0E0;
+  padding: 5px 15px 5px 5px;
+  border-radius: 33px;
+  transition: all 0.3s ease;
   cursor: pointer;
+}
+
+.cart-container:hover {
+  background: #274C5B;
+  color: #fff;
+}
+
+.cart-circle {
+  background: #274C5B;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  color: white;
+  transition: 0.3s;
 }
 
-.search-btn:hover {
-  background-color: #6ba582;
+.cart-container:hover .cart-circle {
+  background: #fff;
+  color: #274C5B;
+}
+/* Asosiy konteynerni flex qilish */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center; /* Vertikal o'rtaga olish */
+  justify-content: space-between; /* Elementlarni chetlarga yoyish */
 }
 
+/* O'ng tomonni tartibga solish */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Search va Cart orasidagi masofa */
+}
+
+/* Search qutisi dizayni */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #FAFAFA;
+  border: 1px solid #E0E0E0;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 5px;
+  width: 120px; /* O'zingga moslab o'zgartirishing mumkin */
+  font-size: 14px;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Cart dizayni */
 .cart-container {
   display: flex;
   align-items: center;
   gap: 10px;
   border: 1px solid #E0E0E0;
-  border-radius: 30px;
-  padding: 5px 15px 5px 5px;
+  padding: 5px 15px 5px 5px; /* Chapdan kamroq padding rasm uchun */
+  border-radius: 33px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.cart-icon {
-  background-color: #274C5B;
-  width: 35px;
-  height: 35px;
+.cart-circle {
+  background: #274C5B;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -110,118 +176,62 @@
   color: white;
 }
 
-.cart-text {
+.cart-label {
   font-weight: 700;
   color: #274C5B;
   font-size: 14px;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
+/* Hover bo'lganda rang o'zgarishi */
+.cart-container:hover {
+  background: #f5f5f5;
 }
 
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #274C5B;
-  margin: 5px 0;
-  transition: 0.3s;
-}
-
-
-@media (max-width: 1024px) {
-  .nav-links {
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    font-size: 15px;
-  }
-  
-  .search-input {
-    width: 120px;
-  }
-  
-  .nav-actions {
-    gap: 15px;
-  }
-}
-
+/* Mobil versiyada ham tartib buzilmasligi uchun */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 15px 0;
+  .header-actions {
+    gap: 8px;
   }
-  
-  .container {
-    padding: 0 15px;
+  .search-box {
+    display: none; /* Telefonda joy tejash uchun yashirish mumkin */
   }
-  
-  .menu-toggle {
+}
+/* --- Mobil Versiya --- */
+@media (max-width: 992px) {
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .main-nav.active {
     display: block;
   }
-  
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
+
+  .main-nav ul {
     flex-direction: column;
-    gap: 0;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: none;
+    align-items: center;
+    gap: 25px;
   }
-  
-  .nav-links.active {
+
+  .menu-toggle {
     display: flex;
-  }
-  
-  .nav-links a {
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f0f0;
-    width: 100%;
-  }
-  
-  .nav-links a:last-child {
-    border-bottom: none;
-  }
-  
-  .search-container {
-    display: none;
-  }
-  
-  .cart-text {
-    display: none;
-  }
-  
-  .cart-container {
-    padding: 5px;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
     border: none;
   }
-}
 
-@media (max-width: 480px) {
-  .logo span {
-    font-size: 20px;
-  }
-  
-  .logo img {
-    width: 30px;
-  }
-  
-  .cart-icon {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .search-btn {
-    width: 30px;
-    height: 30px;
+  .bar {
+    width: 28px;
+    height: 3px;
+    background: #274C5B;
+    border-radius: 10px;
   }
 }

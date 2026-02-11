@@ -1,40 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
-import h25 from "../../assets/h25.png";
-import { Link } from 'react-router-dom'; 
-
+import h25 from "../../assets/h25.png"
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="navbar">
+    <header className="site-header">
       <div className="container">
+        {/* Logo qismi - Kichraytirilgan */}
         <div className="logo">
-          <img src={h25} alt="logo" />
-          <span>Organick</span>
+          <img src={h25} alt="Organick" className="logo-img" />
+          <span className="logo-text">Organick</span>
         </div>
 
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          
-          <div className="dropdown">
-            <Link to="/contact-us">ContactUs <i className="arrow-down"></i></Link>
-          </div>
-          
-          <Link to="/shop">Shop</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/news">News</Link>
+        {/* Navigatsiya - Chiroyli hoverlar bilan */}
+        <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#news">News</a></li>
+          </ul>
         </nav>
 
-        <div className="nav-actions">
-          <div className="search-container">
-            <input type="text" className="search-input" />
+        {/* O'ng tomon: Search va Cart */}
+        <div className="header-actions">
+          <div className="search-box">
+            <input type="text" placeholder="Search..." />
             <button className="search-btn">🔍</button>
           </div>
-          
+
           <div className="cart-container">
-            <div className="cart-icon">🛒</div>
-            <span className="cart-text">Cart (0)</span>
+            <div className="cart-circle">🛒</div>
+            <span className="cart-label">Cart (0)</span>
           </div>
+
+          {/* Hamburger (Mobil uchun) */}
+          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
+            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
+            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
+          </button>
         </div>
       </div>
     </header>
