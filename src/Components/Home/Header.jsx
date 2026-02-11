@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Header.css';
-import h25 from "../../assets/h25.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +8,11 @@ const Header = () => {
     <header className="site-header">
       <div className="container">
         <div className="logo">
-          <img src={h25} alt="Organick Logo" className="logo-img" />
+          <img src="/h25.png" alt="Logo" className="logo-img" />
           <span className="logo-text">Organick</span>
         </div>
 
+        {/* Menyu qismi - isOpen true bo'lsa 'active' klassi qo'shiladi */}
         <nav className={`main-nav ${isOpen ? 'active' : ''}`}>
           <ul>
             <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
@@ -24,11 +24,6 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
-          <div className="search-box">
-            <input type="text" placeholder="Search..." />
-            <button className="search-btn">🔍</button>
-          </div>
-
           <div className="cart-container">
             <div className="cart-circle">🛒</div>
             <span className="cart-label">Cart (0)</span>
