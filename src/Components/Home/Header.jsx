@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
 import './Header.css';
 import h25 from "../../assets/h25.png"
+
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="site-header">
       <div className="container">
-        {/* Logo qismi - Kichraytirilgan */}
         <div className="logo">
-          <img src={h25} alt="Organick" className="logo-img" />
+          <img src={h25} alt="Organick Logo" className="logo-img" />
           <span className="logo-text">Organick</span>
         </div>
 
-        {/* Navigatsiya - Chiroyli hoverlar bilan */}
-        <nav className={`main-nav ${isMenuOpen ? 'active' : ''}`}>
+        <nav className={`main-nav ${isOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#news">News</a></li>
+            <li><a href="#home" onClick={() => setIsOpen(false)}>Home</a></li>
+            <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
+            <li><a href="#shop" onClick={() => setIsOpen(false)}>Shop</a></li>
+            <li><a href="#projects" onClick={() => setIsOpen(false)}>Projects</a></li>
+            <li><a href="#news" onClick={() => setIsOpen(false)}>News</a></li>
           </ul>
         </nav>
 
-        {/* O'ng tomon: Search va Cart */}
         <div className="header-actions">
           <div className="search-box">
             <input type="text" placeholder="Search..." />
@@ -36,11 +34,10 @@ const Header = () => {
             <span className="cart-label">Cart (0)</span>
           </div>
 
-          {/* Hamburger (Mobil uchun) */}
-          <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
-            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
-            <span className={isMenuOpen ? 'bar open' : 'bar'}></span>
+          <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
           </button>
         </div>
       </div>
