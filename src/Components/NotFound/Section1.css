@@ -1,0 +1,240 @@
+.not img {
+  width: 100%;
+  max-width: 1900px;
+  height: auto;
+  object-fit: cover;
+}
+
+.nota {
+  position: absolute;
+  top: 250px;
+  left: 1100px;
+}
+
+.nota h1 {
+  font-size: 290px;
+  color: rgb(136, 143, 143);
+  margin: 0;
+  line-height: 1;
+}
+
+.nota h2 {
+  font-size: 70px;
+  font-weight: 800;
+  color: #274C5B;
+  margin: 0;
+}
+
+.nota p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #525C60;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.nota button {
+  width: 265px;
+  height: 65px;
+  font-size: 20px;
+  color: white;
+  background-color: #274C5B;
+  border-radius: 8px;
+  border: none;
+  margin-top: 40px;
+  margin-left: 110px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nota button:hover {
+  background-color: #525C60;
+  color: white;
+}
+
+
+@media (max-width: 1600px) {
+  .nota {
+    left: 900px;
+    top: 200px;
+  }
+  
+  .nota h1 {
+    font-size: 240px;
+  }
+  
+  .nota h2 {
+    font-size: 60px;
+  }
+}
+
+/* Desktop - 1400px */
+@media (max-width: 1400px) {
+  .nota {
+    left: 750px;
+    top: 180px;
+  }
+  
+  .nota h1 {
+    font-size: 200px;
+  }
+  
+  .nota h2 {
+    font-size: 52px;
+  }
+  
+  .nota p {
+    font-size: 17px;
+  }
+  
+  .nota button {
+    width: 240px;
+    height: 60px;
+    font-size: 18px;
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nota {
+    left: 600px;
+    top: 150px;
+  }
+  
+  .nota h1 {
+    font-size: 170px;
+  }
+  
+  .nota h2 {
+    font-size: 45px;
+  }
+  
+  .nota p {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  
+  .nota button {
+    width: 220px;
+    height: 55px;
+    font-size: 17px;
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nota {
+    left: 450px;
+    top: 120px;
+  }
+  
+  .nota h1 {
+    font-size: 140px;
+  }
+  
+  .nota h2 {
+    font-size: 38px;
+  }
+  
+  .nota p {
+    font-size: 15px;
+    max-width: 450px;
+  }
+  
+  .nota button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nota {
+    position: static;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .nota h1 {
+    font-size: 100px;
+  }
+  
+  .nota h2 {
+    font-size: 32px;
+  }
+  
+  .nota p {
+    font-size: 14px;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  .nota button {
+    width: 180px;
+    height: 48px;
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  
+  .not img {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .nota {
+    padding: 30px 15px;
+  }
+  
+  .nota h1 {
+    font-size: 70px;
+  }
+  
+  .nota h2 {
+    font-size: 26px;
+  }
+  
+  .nota p {
+    font-size: 13px;
+    margin-top: 15px;
+  }
+  
+  .nota button {
+    width: 160px;
+    height: 45px;
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .not img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .nota h1 {
+    font-size: 50px;
+  }
+  
+  .nota h2 {
+    font-size: 22px;
+  }
+  
+  .nota p {
+    font-size: 12px;
+  }
+  
+  .nota button {
+    width: 140px;
+    height: 42px;
+    font-size: 13px;
+  }
+  
+  .not img {
+    height: 250px;
+  }
+}

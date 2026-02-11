@@ -1,0 +1,194 @@
+.sec2 {
+  padding: 150px 259px 190px 260px;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.sec3, .sec4 {
+  flex: 1;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  max-height: 280px;
+}
+
+.card-content {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 10;
+}
+
+.card-subtitle {
+  font-family: 'Yellowtail',;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.sec4 .card-subtitle {
+  color: #7EB693;
+}
+
+.card-title {
+  font-size: 20px !important;
+  font-weight: 100;
+  color: #fff;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.sec4 .card-title {
+  color: #274C5B;
+}
+
+.h2, .h3 {
+  width: 100%;
+  height: 100%;
+  
+}
+
+@media (min-width: 1400px) {
+  .sec2 {
+    max-width: 1300px;
+    gap: 30px;
+  }
+  
+  .sec3, .sec4 {
+    max-height: 320px;
+  }
+  
+  .card-title {
+    font-size: 34px;
+  }
+  
+  .card-subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sec2 {
+    padding: 40px 20px;
+    max-width: 1000px;
+    gap: 20px;
+  }
+  
+  .sec3, .sec4 {
+    max-height: 260px;
+  }
+  
+  .card-content {
+    top: 30px;
+    left: 30px;
+  }
+  
+  .card-title {
+    font-size: 28px;
+  }
+  
+  .card-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec2 {
+    padding: 35px 20px;
+    max-width: 900px;
+    gap: 18px;
+  }
+
+  .sec3, .sec4 {
+    max-height: 240px;
+  }
+
+  .card-content {
+    top: 28px;
+    left: 28px;
+  }
+
+  .card-title {
+    font-size: 26px;
+  }
+
+  .card-subtitle {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec2 {
+    flex-direction: column;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .sec3, .sec4 {
+    max-height: 260px;
+    width: 100%;
+  }
+
+  .card-content {
+    top: 30px;
+    left: 30px;
+  }
+  
+  .card-title {
+    font-size: 28px;
+  }
+  
+  .card-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sec2 {
+    padding: 25px 12px;
+    gap: 15px;
+  }
+
+  .sec3, .sec4 {
+    max-height: 220px;
+  }
+
+  .card-content {
+    top: 25px;
+    left: 25px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec2 {
+    padding: 20px 10px;
+  }
+
+  .sec3, .sec4 {
+    max-height: 200px;
+  }
+
+  .card-content {
+    top: 22px;
+    left: 22px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .card-subtitle {
+    font-size: 17px;
+  }
+}
+    

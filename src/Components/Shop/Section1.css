@@ -1,0 +1,33 @@
+.Shop img{
+    width: 1900px;
+}
+.Shop img {
+    width: 100%;
+    max-width: 1990px;
+    height: 450px;
+    object-fit: cover;
+}
+
+@media (max-width: 1690px) {
+    .Shop img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Shop img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Shop img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .Shop img {
+        height: 200px;
+    }
+}

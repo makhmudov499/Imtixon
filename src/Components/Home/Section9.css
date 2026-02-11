@@ -1,0 +1,120 @@
+.Section9 {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    position: relative;
+    font-family: sans-serif;
+}
+
+/* Yuqori qism matnlari */
+.Section9 > i {
+    font-family: 'Yellowtail', cursive; /* Agar bo'lsa */
+    color: #7eb693;
+    font-size: 28px;
+    display: block;
+}
+
+.Section9 > h1 {
+    color: #274c5b;
+    font-size: 38px;
+    margin: 10px 0 40px 0;
+    line-height: 1.2;
+}
+
+/* More News tugmasi */
+.Section9 > button {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 15px 35px;
+    background: transparent;
+    border: 2px solid #274c5b;
+    color: #274c5b;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Section9 > button:hover {
+    background: #274c5b;
+    color: #fff;
+}
+
+/* Rasmlar konteyneri */
+.img1, .img2 {
+    display: inline-block;
+    width: calc(50% - 15px);
+    position: relative;
+    margin-bottom: 100px; /* Oq blok chiqib ketishi uchun joy */
+}
+
+.img1 { margin-right: 30px; }
+
+.img1 > img, .img2 > img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Rasm ustidagi oq bloklar */
+.img11, .img22 {
+    position: absolute;
+    bottom: -60px; /* Pastga chiqarish */
+    left: 30px;
+    right: 30px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.img11 p, .img22 p {
+    color: #274c5b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.img11 h1, .img22 h1 {
+    color: #274c5b;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.img11 b, .img22 b {
+    color: #525c60;
+    font-size: 14px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Kichik Read More tugmasi */
+.img11 button, .img22 button {
+    background: #efd372;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: #274c5b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.img11 button:hover, .img22 button:hover {
+    background: #e6c554;
+}
+
+/* Mobil versiya uchun */
+@media (max-width: 768px) {
+    .img1, .img2 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 120px;
+    }
+    .Section9 > button {
+        position: static;
+        margin-bottom: 30px;
+    }
+}

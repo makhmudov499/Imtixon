@@ -1,0 +1,36 @@
+.jsx1 img{
+    width: 1690px;
+    height: 450px;
+}
+
+
+.jsx1 img {
+    width: 100%;
+    max-width: 1990px;
+    height: 450px;
+    object-fit: cover;
+}
+
+@media (max-width: 1690px) {
+    .jsx1 img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .jsx1 img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .jsx1 img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .jsx1 img {
+        height: 200px;
+    }
+}

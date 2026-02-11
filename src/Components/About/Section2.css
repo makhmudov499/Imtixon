@@ -1,0 +1,117 @@
+.section2-container {
+  padding: 100px 10%;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.choose-main {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.choose-text-side { flex: 1.2; }
+.choose-image-side { flex: 1; }
+
+.choose-image-side img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.subtitler {
+  font-family: 'Yellowtail', cursive;
+  color: #7EB693;
+  font-size: 30px;
+  display: block;
+}
+
+.main-titler {
+  color: #274C5B;
+  font-size: 45px;
+  font-weight: 800;
+  margin: 10px 0 25px;
+}
+
+.main-desc {
+  color: #525C60;
+  margin-bottom: 35px;
+}
+
+.badge {
+  background: #ECECEC;
+  padding: 15px 30px;
+  border-radius: 40px;
+  color: #274C5B;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #7EB693;
+  border-radius: 50%;
+}
+
+.natural-box p {
+  padding: 10px 0 25px 35px;
+  color: #525C60;
+  font-size: 15px;
+}
+
+.info-cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  background: #F9F8F8;
+  padding: 40px 20px;
+  border-radius: 30px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  transition: 0.3s;
+}
+
+.card-item:hover {
+  background: #ffffff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.icon-container {
+  background: #ffffff;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  margin: 0 auto 20px;
+  color: #274C5B;
+  /* box-shadow: 10px -10px 0px -5px rgba(239, 211, 114, 0.3); */
+}
+
+.card-item h3 {
+  color: #274C5B;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.card-item p {
+  color: #525C60;
+  font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .choose-main { flex-direction: column; text-align: center; }
+  .badge { justify-content: center; }
+  .natural-box p { padding-left: 0; }
+}
