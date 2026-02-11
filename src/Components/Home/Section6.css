@@ -148,43 +148,84 @@
   color: #FFA500;
 }
 
-@media (max-width: 1200px) {
+/* --- SECTION 6 MEDIA QUERIES --- */
+
+/* Katta ekranlar uchun (masalan, 1400px gacha bo'lgan ekranlarda 200px marginni kamaytirish) */
+@media (max-width: 1400px) {
+  .section6 > i, 
+  .section6 > h1, 
+  .offer {
+    margin-left: 100px;
+  }
   .section6 > button {
-    position: static;
-    margin: 20px auto 40px auto;
+    right: 100px;
+  }
+}
+
+/* Planshetlar uchun (1024px dan kichik) */
+@media (max-width: 1024px) {
+  .section6 > i, 
+  .section6 > h1, 
+  .offer {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .offer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .section6 > button {
+    position: static; 
+    margin-left: 40px;
+    margin-bottom: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .section6 {
-    padding: 60px 20px;
+    padding: 60px 15px;
+    text-align: center; 
+  }
+
+  .section6 > i, 
+  .section6 > h1 {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
 
   .section6 > h1 {
-    font-size: 36px;
+    font-size: 32px;
+  }
+
+  .section6 > button {
+    margin: 0 auto 40px auto; 
+    display: inline-flex;
   }
 
   .offer {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+    margin-left: 0;
+    margin-right: 0;
     gap: 20px;
+  }
+
+  .productc-item img {
+    height: 200px; 
   }
 }
 
 @media (max-width: 480px) {
-  .section6 > i {
-    font-size: 28px;
-  }
-
   .section6 > h1 {
     font-size: 28px;
   }
 
-  .section6 > button {
-    width: 100%;
-    justify-content: center;
+  .productc-item {
+    padding: 20px 15px;
+  }
+
+  .descriptions p p {
+    font-size: 16px;
   }
 }
