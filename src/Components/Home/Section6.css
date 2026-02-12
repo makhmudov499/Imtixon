@@ -148,9 +148,7 @@
   color: #FFA500;
 }
 
-/* --- SECTION 6 MEDIA QUERIES --- */
 
-/* Katta ekranlar uchun (masalan, 1400px gacha bo'lgan ekranlarda 200px marginni kamaytirish) */
 @media (max-width: 1400px) {
   .section6 > i, 
   .section6 > h1, 
@@ -162,7 +160,6 @@
   }
 }
 
-/* Planshetlar uchun (1024px dan kichik) */
 @media (max-width: 1024px) {
   .section6 > i, 
   .section6 > h1, 

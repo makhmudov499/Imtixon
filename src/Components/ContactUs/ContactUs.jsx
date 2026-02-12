@@ -5,7 +5,6 @@ import Section1 from "../ContactUs/Section1"
 import Section2 from "../ContactUs/Section2"
 import Section3 from "../ContactUs/Section3"
 import Section4 from "../ContactUs/Section4"
-
 import Section10 from "../Home/Section10"
 
 const ContactUs = () => {
