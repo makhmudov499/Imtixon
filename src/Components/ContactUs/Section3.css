@@ -94,3 +94,69 @@
     margin: 0;
     line-height: 1.4;
 }
+
+@media (max-width: 1024px) {
+    .bargs-content-boxs {
+        width: 400px;
+        right: 30px;
+        padding: 30px;
+    }
+    
+    .bargs-titles {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bargs-containers {
+        padding: 40px 5%;
+    }
+
+    .bargs-cards {
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bargs-content-boxs {
+        position: relative; 
+        top: 0;
+        right: 0;
+        transform: none; 
+        width: 100%; 
+        border-radius: 0 0 30px 30px; 
+        padding: 30px 20px;
+        box-shadow: none;
+    }
+
+    .bargs-bg-imgs {
+        height: 350px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .bargs-subtitles {
+        font-size: 20px;
+    }
+
+    .bargs-titles {
+        font-size: 26px;
+    }
+
+    .bargs-texts {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .bargs-location-items {
+        gap: 10px;
+    }
+
+    .bargs-icon-wrappers {
+        padding: 8px;
+    }
+
+    .bargs-icons {
+        font-size: 20px;
+    }
+}
